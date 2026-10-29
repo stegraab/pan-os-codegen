@@ -6,6 +6,7 @@ resource "panos_dns_settings" "split_dns" {
   }
 
   dns_settings = {
-    dns_proxy_object = panos_dns_proxy.split_dns.name
+    # Name of an existing shared DNS proxy in this template.
+    dns_proxy_object = "existing-shared-dns-proxy"
   }
 }
